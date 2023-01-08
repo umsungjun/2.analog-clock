@@ -94,8 +94,8 @@ const AnalogClock = $container => {
   for (let i = 0; i < $hour.length; i++) {
     setInterval(() => { // setInterval은 반복문의 관계없이 지정된 시간마다 반복
       const date = new Date() // 현재 날짜 및 시간을 1초마다 가져옴
-
-      $hour[i].style.setProperty('--deg', date.getHours() * 5) // 360 / 24 = 15
+      // console.log(date.getMinutes())
+      $hour[i].style.setProperty('--deg', date.getHours() * 30) // 360 / 12 = 30
       $minute[i].style.setProperty('--deg', date.getMinutes() * 6) // 360 / 60 = 6
       $second[i].style.setProperty('--deg', date.getSeconds() * 6) // 360 / 60 = 6
     }, 1000)
